@@ -1,0 +1,41 @@
+---
+openapi: "3.0.1"
+info:
+  title: "DMSFileUpload"
+  description: "DMS File Upload"
+  version: "1.0.0"
+  extensions: {}
+servers:
+- url: "/rhb/api/dmsfileupload"
+paths:
+  /upload:
+    post:
+      summary: "Operation for DMS File Upload"
+      description: "Operation for DMS File Upload"
+      operationId: "Operation for DMS File Upload"
+      requestBody:
+        description: "body"
+        content:
+          application/json:
+            schema:
+              $ref: "http://localhost:8089/admin/swagger-proxy/get?url=projects/RHBMAP/repos/rhb-api-models/raw/DMSFileUploadReqBody.yaml?at=DMSFileUploadReqBody#/components/schemas/DMSFileUploadReqBody"
+              exampleSetFlag: false
+            exampleSetFlag: false
+        required: true
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "http://localhost:8089/admin/swagger-proxy/get?url=projects/RHBMAP/repos/rhb-api-models/raw/DMSFileUploadResponse.yaml?at=DMSFileUploadResponse#/components/schemas/DMSFileUploadResponse"
+                extensions: {}
+                exampleSetFlag: false
+              exampleSetFlag: false
+          extensions: {}
+      extensions:
+        x-codegen-request-body-name: "body"
+    extensions: {}
+components: {}
+extensions:
+  x-original-swagger-version: "2.0"
